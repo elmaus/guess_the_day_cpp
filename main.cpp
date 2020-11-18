@@ -135,6 +135,8 @@ void play()
 			right_day = (month_code[month] + date + year_code(year)) % 7;  
 		}
 		
+		if(is_leap_year(year) && (month == 1 or month == 2)) right_day -= 1;
+		
 		if(right_day == guessed_day)
 		{
 			cout << "Correct!!!\n\n";
@@ -189,4 +191,3 @@ int main()
 	}	
 	return 0;
 }
-	
